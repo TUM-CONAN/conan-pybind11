@@ -8,20 +8,20 @@
     
 ## Upload packages to server
 
-    $ conan upload pybind11/2.2.1@ulricheck/stable --all -r camp
+    $ conan upload pybind11/2.2.4@ulricheck/stable --all -r camp
     
 ## Reuse the packages
 
 ### Basic setup
 
-    $ conan install pybind11/2.2.1@ulricheck/stable
+    $ conan install pybind11/2.2.4@ulricheck/stable
     
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
     
     [requires]
-    pybind11/2.2.1@ulricheck/stable
+    pybind11/2.2.4@ulricheck/stable
     
     [generators]
     txt
