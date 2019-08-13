@@ -4,7 +4,7 @@ import os
 
 class PyBind11Conan(ConanFile):
     name = "pybind11"
-    version = "2.2.4"
+    version = "2.3.0"
     license = "BSD Style: https://github.com/pybind/pybind11/blob/master/LICENSE"
     url = "https://github.com/ulricheck/conan-pybind11"
     settings = "os", "compiler", "build_type", "arch"
