@@ -25,6 +25,7 @@ class PyBind11Conan(ConanFile):
         cmake = CMake(self)
         cmake.verbose = True
         cmake.definitions["PYBIND11_TEST"] = False
+        cmake.definitions["PYBIND11_INSTALL"] = True
         cmake.configure(source_dir='source')
         cmake.build()
         cmake.install()
