@@ -11,22 +11,13 @@ class PyBind11Conan(ConanFile):
     generators = "cmake"
 
     options = {
-        "with_system_python": [True, False],
     }
 
     default_options = {
-        "with_system_python": True
     }
 
     def requirements(self):
-        if self.options.with_system_python:
-            self.requires("python_dev_config/[>=0.5]@camposs/stable")
-        else:
-            self.requires("python/3.8.2@camposs/stable")
-            self.requires("python-setuptools/41.2.0@camposs/stable")
-            self.requires("python-pip/[>=19.2.3]@camposs/stable")
-            self.requires("cython/0.29.16@camposs/stable")
-            self.requires("python-numpy/1.18.4@camposs/stable")
+        self.requires("python_dev_config/[>=0.5]@camposs/stable")
 
     def source(self):
         tools.download("https://github.com/pybind/pybind11/archive/v%s.tar.gz" % self.version,
