@@ -17,7 +17,7 @@ class PyBind11Conan(ConanFile):
     }
 
     def requirements(self):
-        self.requires("python_dev_config/[>=0.5]@camposs/stable")
+        self.requires("python_dev_config/[>=0.6]@camposs/stable")
 
     def source(self):
         tools.download("https://github.com/pybind/pybind11/archive/v%s.tar.gz" % self.version,
